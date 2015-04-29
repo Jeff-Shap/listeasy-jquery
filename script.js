@@ -4,13 +4,11 @@ var template = function(text) {
 
 var main = function() {
   $('form').submit(function() {
-      
-    
-    
+    var text = $('#todo').val(),
+     html = template(text); 
+    $('.list').append(html);
     return false;  
-  }
-  
-  
-};
+  })
+}
 
 $(document).ready(main);
